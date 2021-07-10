@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .black {
+            background-color: black;
+            color: white;
+            text-align: center;
+
+        }
+
+        .red {
+            background-color: red;
+            color: #abcabc;
+            text-align: center;
+
+        }
+
+        .green {
+            background-color: green;
+        }
+    </style>
+
+
+    <script>
+
+        function myfun() {
+
+            //Target select with option
+            var selectDOM = document.querySelector('#c')
+            var res;
+
+            switch (selectDOM.value) {
+                case '#000000': res = "black"; break;
+                case '#ff0000': res = "red"; break;
+                case '#00ff00': res = "green"; break;
+                case '#0000ff': res = "blue"; break;
+                case '#f7d307': res = "yellow"; break;
+                case '#0af5e1': res = "cyan"; break;
+                default: res = 'Invalild';
+            }
+
+            document.querySelector('h2').className = res
+
+        }
+        
+    </script>
+</head>
+
+<body>
+
+    <h2> Highligh THIS CONTENT WITH SELECTED COLOR</h2>
+
+    Select Any Color: <br />
+
+    <select id="c" onchange="myfun()">
+        <option value="#000000">Choose Any one Color</option>
+        <option value="#ff0000">red</option>
+        <option value="#00ff00">green</option>
+        <option value="#0000ff">blue</option>
+        <option value="#f7d307">Yellow</option>
+        <option value="#0af5e1">cyan</option>
+    </select>
+</body>
+
+</html>

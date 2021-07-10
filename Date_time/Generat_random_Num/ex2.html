@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FORM VALIDATIONS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.css" />
+    <script src="ex4.js"></script>
+
+
+    <style>
+        .form-control-plaintext
+        {
+            font-weight:bold;
+            width:15%;
+            letter-spacing:9px;
+            font-family:Curlz MT;
+        }
+    </style>
+	
+</head>
+<body>
+    
+<div class="container w-50 py-5">
+
+    <form action="server.php" onsubmit="return validations()" novalidate>
+
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" id="uname" value="" autocomplete="off" />
+            <span id="unameSpan"></span>
+        </div>
+
+
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" value="" autocomplete="off" />
+            <span id="emailSpan"></span>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <div class="input-group mb-3">
+                <input type="password" class="form-control" id="pwd" value="" />
+                
+				<button type="button" onclick="showpwd()" class="input-group-text">
+						<i class="bi bi-eye-slash-fill"></i>
+				</button>
+				
+            </div>
+            <span id="pwdSpan"></span>
+        </div>
+
+
+
+        
+        <div class="mb-3">
+
+            <label class="form-label col-lg-12">Enter Verification Code</label>
+            <input type="text" class="form-control d-inline w-25" autocomplete="off" id="verfication" value="" />
+            
+            <div class="input-group mb-3 d-inline text-center">
+             <input  type="text" readonly class="form-control-plaintext d-inline bg-dark text-white" value="789654" />
+             <button type="button" onclick="captchaCode()" class="input-group-text d-inline ">Refresh captcha</button>
+           </div>
+            <span id="verficationSpan" class="d-block"></span>
+        </div>
+    
+
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3">Submit</button>
+        </div>
+
+
+    </form>
+
+</div>
+
+</body>
+</html>

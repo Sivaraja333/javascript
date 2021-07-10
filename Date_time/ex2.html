@@ -1,0 +1,19 @@
+<script>
+    var d = new Date()
+    var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    //monthNames[0]
+    //monthNames[5]-> June
+
+    var month, Year, date, hours, minutes, seconds
+    month = d.getMonth()//5
+    year = d.getFullYear()
+    date = d.getDate()
+    hours = d.getHours()
+    minutes = d.getMinutes()
+    seconds = d.getSeconds()
+
+    //document.write(`${date}-${month + 1}-${year}`)
+    document.write(`${date}-${monthNames[d.getMonth()].slice(0, 3)}-${year} [${hours}:${minutes}:${seconds}]`)
+
+</script>

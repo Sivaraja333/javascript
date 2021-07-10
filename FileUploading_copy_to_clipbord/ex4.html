@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function myfun() {
+            var ptext = document.querySelector('p').innerText
+            var btntext = document.querySelector('button').innerText
+
+            //New Input Element
+            var InputElement = document.createElement('input')
+            InputElement.type = "text"
+
+            //Add/Display New Created Elements on HTML Document
+            document.body.appendChild(InputElement)
+
+            //add ptext to input_Element
+            InputElement.value = ptext
+
+            //Copy the text from Input
+            InputElement.select()
+
+            //takes copy of selected information from  ELEMENT
+            document.execCommand("copy")
+
+
+            //Remove Created Element
+            document.body.removeChild(InputElement)
+
+            if (btntext == "Copy") {
+                document.querySelector('button').innerText = "Copied"
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <h2>What is Create Element ?</h2>
+    <p>What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has
+        been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book it has?...</p>
+
+    <button onclick="myfun()">Read More</button>
+
+
+</body>
+
+</html>

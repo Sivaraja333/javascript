@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var CurrentDateTime = () => {
+            var d = new Date()
+            var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+            var month, Year, date, hours, minutes, seconds
+            month = d.getMonth()//5
+            year = d.getFullYear()
+            date = d.getDate()
+            hours = d.getHours()
+            minutes = d.getMinutes()
+            seconds = d.getSeconds()
+
+            //document.write(`${date}-${month + 1}-${year}`)
+            //    document.write(`${date}-${monthNames[d.getMonth()].slice(0, 3)}-${year} [${hours}:${minutes}:${seconds}]`)
+            document.querySelector('#dateTime').innerText = `${date}-${monthNames[d.getMonth()].slice(0, 3)}-${year} [${hours}:${minutes}:${seconds}]`
+
+        }
+
+        window.setInterval(CurrentDateTime, 1000)
+    </script>
+</head>
+
+<body>
+
+    <h2>Current Date & Time </h2>
+    <div id="dateTime"></div>
+
+</body>
+
+</html>

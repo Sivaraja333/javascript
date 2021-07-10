@@ -1,0 +1,32 @@
+<script>
+    var person = {
+        "name": "Ram",
+        "age": 27,
+        "vehicles": {
+            "car": "limousine",
+            "bike": "ktm-duke",
+            "airlines": {
+                "lufthansa": "Air123",
+                "British_airways": "Brt707",
+                "ar1": "abc",
+                "ar2": "xyz",
+            }
+        }
+    }
+
+
+    document.write(`Name: ${person.name} <br />`)
+
+    document.write(`
+    Vehicles- <br />
+    
+    cars: ${person.vehicles.car}-${person.vehicles.bike} <br /> <br />
+    
+    arlines: 
+    ${person.vehicles.airlines.lufthansa}-${person.vehicles.airlines.British_airways} <br /><br />`)
+
+    for (var myobj in person.vehicles.airlines) {
+        document.write(`<li>${person.vehicles.airlines[myobj]}</li>`)
+    }
+
+</script>

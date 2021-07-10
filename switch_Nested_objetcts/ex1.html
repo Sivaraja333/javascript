@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function myfun() {
+
+            var xInputDOM = document.querySelector('#xInput')
+
+            var yInputDOM = document.querySelector('#yInput')
+
+            alert(Number.parseInt(xInputDOM.value) + Number.parseInt(yInputDOM.value))
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <form action="#">
+        X value is:
+        <input type="number" id="xInput" value="1000" /> <br />
+
+        Y value is:
+        <input type="number" id="yInput" /> <br />
+
+        <button type="button" onclick="myfun()">CALCULATE</button>
+
+    </form>
+
+</body>
+
+</html>
